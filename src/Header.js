@@ -3,7 +3,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import './App.css';
 import logo4 from './logo4.webp';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 
 
@@ -14,17 +15,19 @@ export default function Header() {
 
   
 }
+const location = useLocation();
 const navigate = useNavigate();
   const handleNavigation = (path) => {
     navigate(path);
 };
 const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Coaches', href: '/coaches', current: false },
-    { name: 'Personal Training', href: '/personalTraining', current: false },
-    { name: 'Classes', href: '/schedule', current: false },
-    { name: 'Pricing', href: '/options', current: false },
-  ]
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'Coaches', href: '/coaches', current: location.pathname === '/coaches' },
+    { name: 'Personal Training', href: '/personalTraining', current: location.pathname === '/personalTraining' },
+    { name: 'Classes', href: '/schedule', current: location.pathname === '/schedule' },
+    { name: 'Pricing', href: '/options', current: location.pathname === '/options' },
+];
+
       
     
     
