@@ -20,6 +20,9 @@ const navigate = useNavigate();
   const handleNavigation = (path) => {
     navigate(path);
 };
+const NavigateHome = () => {
+    navigate('/');
+};
 const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'Coaches', href: '/coaches', current: location.pathname === '/coaches' },
@@ -51,7 +54,7 @@ const navigation = [
                   </div>
                   <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div style={{ width: "20%" }} className="flex items-center justify-center">
-                    <img
+                    <img onClick={() => NavigateHome()}
                         style={{ width: "100%", height: "50px" }}
                         src={logo4}
                         alt="Your Company"
