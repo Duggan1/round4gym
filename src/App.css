@@ -29,6 +29,11 @@
   color: white;
 }
 
+.parent-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Example: ensure the link has enough space */
+}
+
 .App-link {
   color: #61dafb;
 }

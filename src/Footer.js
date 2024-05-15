@@ -9,7 +9,7 @@ function Footer() {
             <div className="mb-2 md:mb-0 md:mr-6">
               <a href="tel:+17082794734" className="hover:underline">+1 (708) 279-4734</a>
             </div>
-            <div className="mb-2 md:mb-0 md:mr-6">
+            <div className="mb-2 md:mb-0 md:mr-6 hidden sm:block">
               <a target="_blank"  href="mailto:round4gym@gmail.com" className="hover:underline">round4gym@gmail.com</a>
             </div>
           </div>

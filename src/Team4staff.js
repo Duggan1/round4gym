@@ -47,7 +47,7 @@ const people = [
                         src={logo4}
                         alt="Your Company"
                     />
-                    <h1 className='text-white text-center'>Coaches</h1>
+                    <h1 className='text-white text-center'>Coaching Staff</h1>
           </div>
           <ul
             role="list"

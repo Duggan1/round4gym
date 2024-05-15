@@ -6,6 +6,20 @@ import MMAschedule from './MMAschedule.webp'
 import outsideround4 from './outsideround4.jpeg'
 
 function HomePage() {
+
+
+
+
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
+      }
+    const projects = [
+        { name: 'Coaches', href: '/coaches',  initials: '🥋',  members: 16, bgColor: 'bg-black' },
+        { name: 'Personal Training', href: '/personalTraining', initials: '💪', members: 12, bgColor: 'bg-black' },
+        { name: 'Classes', href: '/schedule', initials: '🏋🏾',  members: 16, bgColor: 'bg-black' },
+        { name: 'Memberships', href: '/options', initials: '👊',  members: 8, bgColor: 'bg-black' },
+        
+      ]
     return (<>
         <Header/>
     <div>
@@ -26,15 +40,16 @@ function HomePage() {
           </div>
 
           <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/mD2rWEowr-w?autoplay=1&enablejsapi=1"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
+                style={{maxWidth:'85%'}}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/mD2rWEowr-w?autoplay=1&enablejsapi=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                    </iframe>
 
           
           <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
@@ -55,6 +70,14 @@ function HomePage() {
                 <p>Our Classes are dedicated to making you stronger, leaner, and healthier.
                 </p>
               </blockquote>
+
+
+
+            
+
+
+
+
               <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-white">Round 4 Gym</div>
                 <div className="mt-1 text-gray-400"><a href="https://www.google.com/maps/place/Round+4+Gym/@41.6902338,-87.8198884,17z/data=!3m1!4b1!4m6!3m5!1s0x880e393a11030c23:0x4500477e9a1bc880!8m2!3d41.6902338!4d-87.8198884!16s%2Fg%2F11lcz4vc02?entry=ttu" 
@@ -90,24 +113,141 @@ function HomePage() {
   </a>
 </div>
 
+
+
+
+
+<div className="relative z-10">
+                <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
+                Where strength meets skill!
+                </h1>
+                <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
+                 
+                  <div>
+      {/* <h2 className="text-sm font-medium text-gray-500">Pinned Projects</h2> */}
+      <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4" >
+        {projects.map((project) => (
+          <li key={project.name} className="col-span-1 flex rounded-md shadow-sm" style={{border:'#01b7f0 solid 4px', minWidth:'fit-content'}} >
+            <div style={{borderRight:'#01b7f0 solid 4px'}}
+              className={classNames(
+                project.bgColor,
+                'flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white'
+              )}
+            >
+              {project.initials}
+            </div>
+            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+              <div className="flex-1 truncate px-4 py-2 text-sm">
+                <a href={project.href}  className="block overflow-hidden whitespace-nowrap text-ellipsis w-full font-medium text-gray-900 hover:text-gray-600">
+                  {project.name}
+                </a>
+                {/* <p className="text-gray-500">{project.members} Members</p> */}
+              </div>
+              {/* <div className="flex-shrink-0 pr-2">
+                <button
+                  type="button"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  <span className="sr-only">Open options</span>
+                  <EllipsisVerticalIcon className="h-5 w-5" aria-hidden="true" />
+                </button>
+              </div> */}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+                </p>
+                {/* <div className="mt-16 flex justify-center">
+                  <RadioGroup
+                    value={frequency}
+                    onChange={setFrequency}
+                    className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"
+                  >
+                    <RadioGroup.Label className="sr-only">Payment frequency</RadioGroup.Label>
+                    {pricing.frequencies.map((option) => (
+                      <RadioGroup.Option
+                        key={option.value}
+                        value={option.value}
+                        className={({ checked }) =>
+                          classNames(checked ? 'bg-indigo-500' : '', 'cursor-pointer rounded-full px-2.5 py-1')
+                        }
+                      >
+                        <span>{option.label}</span>
+                      </RadioGroup.Option>
+                    ))}
+                  </RadioGroup>
+                </div> */}
+              </div>
+
+
+
           </div>
         </div>
       </div>
+
+      
     </div>
         {/* <iframe 
                     class=""
-                    src="https://www.instagram.com/round4gym/embed"
-                    width="10%"
-                    height="290px"
+                    src="https://www.instagram.com/round4gym/embed/"
+                    width="50%"
+                    height="390px"
                     frameborder="0"
                     scrolling="no"
-                    allowtransparency="true"
+                    // allowtransparency="true"
                     
 
                 ></iframe> */}
         {/* <h1>Hello Team Round 4</h1> */}
-      
+        
+        
+      <div style={{marginTop:'-50px'}}>
+                <a href="https://www.instagram.com/round4gym/" target="_blank" rel="noopener noreferrer">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"
+                        alt="Instagram Logo"
+                        className="mx-auto h-12 w-12"
+                    />
+                </a>
+            </div>
+        <div className="bg-white shadow sm:rounded-lg">
+      {/* <div className="px-4 py-5 sm:p-6">
+        <div className="sm:flex sm:items-start sm:justify-between">
+          <div>
+            <h3 className="text-base font-semibold leading-6 text-gray-900">Get Started Today</h3>
+            <div className="mt-2 max-w-xl text-sm text-gray-500">
+              <p>
+              Schedule your complimentary training session with one of our professional trainers today! 
+              </p>
+            </div>
+          </div>
+          <div className="mt-5 sm:ml-6 sm:mt-0 sm:flex sm:flex-shrink-0 sm:items-center">
+            <button 
+              type="button"
+              className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            ><a href="tel:+17082794734" className="hover:underline">Call Us</a>
+              
+            </button>
+          </div>
+        </div>
+      </div> */}
 
+<section className="bg-blue-50 p-6 text-center">
+
+
+            <h2 className="text-2xl font-bold text-gray-800">Follow Round 4 Gym on Instagram</h2>
+            <p className="text-gray-600 mt-2">Stay up to date with the gym's latest training sessions, success stories, and exclusive behind-the-scenes content!</p>
+            
+           
+
+            <a href="https://www.instagram.com/round4gym/" target="_blank" rel="noopener noreferrer"
+                className="mt-5 inline-block bg-pink-600 text-white font-bold py-2 px-4 rounded hover:bg-pink-700 transition-colors">
+                Follow Us
+            </a>
+        </section>
+
+    </div>
 
                     
         

@@ -19,8 +19,8 @@ import logo4W from './logo4W.webp'
       imageUrl:
         ak47,
         record: '(14-4-0)',
-      xUrl: '#',
-      linkedinUrl: '#',
+      xUrl: 'https://www.tapology.com/fightcenter/fighters/55860-askar',
+      linkedinUrl: 'https://www.instagram.com/askarmma94/',
     },
     {
         name: 'Motaz "Izzo" Askar',
@@ -28,8 +28,8 @@ import logo4W from './logo4W.webp'
         imageUrl:
         izzo,
         record: '(5-2-0)',
-         xUrl: '#',
-        linkedinUrl: '#',
+        xUrl: 'https://www.tapology.com/fightcenter/fighters/150352-motaz-askar',
+        linkedinUrl: 'https://www.instagram.com/izzoo145/',
       },
     // More people...
   ]
@@ -39,14 +39,14 @@ import logo4W from './logo4W.webp'
                 <Header/>
     
       <div className="bg-white ">
-        <div className="mx-auto  max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto mb-6 max-w-7xl px-6 lg:px-8">
         
           <div className="mx-auto max-w-2xl lg:mx-0"><img
                         style={{ 
                             width: "100%",
                              height: "250px" }}
                         src={logo4W}
-                        alt="Your Company"
+                        alt="Round 4 Gym"
                     />
             
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -66,6 +66,34 @@ import logo4W from './logo4W.webp'
                 <p className="text-base leading-7 text-gray-900">{person.role}</p>
                 <p className="text-base leading-7 text-gray-600">{person.record}</p>
                 
+                <ul role="list" className="mt-6 flex gap-x-6">
+  <li>
+    <a href={person.xUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
+      <span className="sr-only">X</span>
+      <img
+        src="https://pbs.twimg.com/profile_images/1141736419/fist_400x400.png"
+        alt="X"
+        className="h-5 w-5"
+      />
+    </a>
+  </li>
+  <li>
+    <a href={person.linkedinUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
+      <span className="sr-only">Professional MMA</span>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+        alt="Professional MMA"
+        className="h-5 w-5"
+      />
+    </a>
+  </li>
+</ul>
+
+
+
+
+
+
               </li>
             ))}
           </ul>
