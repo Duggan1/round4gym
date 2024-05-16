@@ -4,6 +4,7 @@ import logo4  from './logo4.webp';
 import FITschedule from './FITschedule.webp';
 import MMAschedule from './MMAschedule.webp'
 import outsideround4 from './outsideround4.jpeg'
+import Facility from './Facility.js'
 
 function HomePage() {
 
@@ -184,6 +185,10 @@ function HomePage() {
 
           </div>
         </div>
+
+
+        <Facility />
+
       </div>
 
       
